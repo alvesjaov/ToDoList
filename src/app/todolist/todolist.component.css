@@ -1,12 +1,179 @@
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
 h1 {
+    font-family: var(--font-family-nunito);
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--secondary-color);
 }
 
-#addButao {
+.label-input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+label {
+    margin-right: 20px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--secondary-color);
+    justify-content: center;
+}
+
+input {
+    outline: none;
+}
+
+#tarefa {
+    font-family: var(--font-family-nunito);
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+}
+
+.controle-formulario {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+}
+
+.texto-formulario {
+    display: block;
+    margin-top: 5px;
+}
+
+.texto-perigo {
+    color: var(--danger-color);
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.btn {
+    font-family: var(--font-family-nunito);
+    font-weight: 700;
+    width: 30%;
+    padding: 8px 20px;
+    font-size: 1.2rem;
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primario {
+    background-color: var(--info-color);
+    color: var(--primary-color);
+    border: none;
+}
+
+.btn-primario:disabled {
+    background-color: var(--disable-btn-color);
+}
+
+.btn-perigo {
+    background-color: var(--danger-color);
+    color: #fff;
+    border: none;
+}
+
+.btn-pequeno {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
+    text-align: center;
 }
 
-#myCheckbox {
-    margin-left: 30px;
+.tabela th,
+.tabela td {
+    padding: 10px;
+    text-align: center;
+    /* Centraliza o texto nas células */
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela th {
+    background-color: #f2f2f2;
+}
+
+.tabela tr:hover {
+    background-color: #f1f1f1;
+}
+
+.del-btn {
+    font-family: var(--font-family-nunito);
+    background-color: var(--danger-color);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Esconder o checkbox padrão */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Estilo do checkbox quando marcado */
+input[type="checkbox"]:checked {
+    background-color: var(--success-color);
+    border: 1px solid var(--disable-btn-color);
+}
+
+/* Adicionar um pseudo-elemento para o checkmark */
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    border-radius: .5px;
+    transform: rotate(45deg);
+    outline: none;
 }
