@@ -1,36 +1,29 @@
 <div class="container">
-
-    <h1>To-Do Application</h1>
-
+    <h1>Lista De Tarefas</h1>
     <hr>
     <form (ngSubmit)="onSubmit(taskForm)" #taskForm="ngForm">
-        <div class="form-group">
-            <label for="task">Task</label>
-            <input type="text" class="form-control" id="task" placeholder="Enter task" ngModel name="task" required>
-            <small *ngIf="taskForm.invalid && taskForm.dirty" id="errorMessage" class="form-text text-danger">Required
-                field</small>
+        <div class="grupo-formulario">
+            <label for="task">Tarefa</label>
+            <input type="text" class="controle-formulario" id="tarefa" placeholder="Digite uma Tarefa" ngModel name="tarefa" required>
+            <small *ngIf="taskForm.invalid && taskForm.dirty" id="MensagemErro" class="texto-formulario texto-perigo">Dados Obrigatórios</small>
         </div>
-
-        <button [disabled]="taskForm.invalid" id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+        <button [disabled]="taskForm.invalid" id="addButao" type="submit" class="btn btn-primario">Adicionar</button>
     </form>
-
     <hr>
-
-    <table class="table">
+    <table class="tabela">
         <thead>
             <tr>
-                <th scope="col">Task</th>
-                <th scope="col">Completed</th>
-                <th scope="col">Delete</th>
+                <th scope="col">Tarefa</th>
+                <th scope="col">Completa</th>
+                <th scope="col">Deletar</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let t of taskArray; index as i">
-                <td>{{t.taskName}}</td>
-                <td><input (change)="onCheck(i)" id="myCheckbox" type="checkbox"></td>
-                <td><button class="btn btn-danger btn-sm" (click)="onDelete(i)">Delete</button></td>
+                <td>{{t.title}}</td>
+                <td><input (change)="onCheck(i)" [checked]="t.completed" id="myCheckbox" type="checkbox"></td>
+                <td><button class="btn btn-perigo btn-pequeno" (click)="onDelete(i)">Deletar Tarefa</button></td>
             </tr>
-
         </tbody>
     </table>
 </div>
