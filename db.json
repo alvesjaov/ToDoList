@@ -1,9 +1,3 @@
 {
-  "todos": [
-    {
-      "id": 1,
-      "title": "Limpar a casa",
-      "completed": false
-    }
-  ]
+  "todos": []
 }
