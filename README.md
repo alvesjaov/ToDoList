@@ -1,27 +1,49 @@
 # ToDoList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+Uma aplicação simples de lista de tarefas para gerenciar suas atividades diárias.
 
-## Development server
+## Instalação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Clone o repositório:
 
-## Code scaffolding
+```sh
+git clone https://github.com/alvesjaov/ToDoList.git
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Navegue até o diretório do projeto:
 
-## Build
+```sh
+cd ToDoList
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. Instale as dependências:
 
-## Running unit tests
+```sh
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Uso
 
-## Running end-to-end tests
+#### Servidor JSON
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para iniciar o servidor JSON, use o seguinte comando:
+```Sh
+npm run json-server
+```
+#### Aplicação Angular
+Para rodar a aplicação Angular, use o seguinte comando:
+```sh
+npm start
+```
+A aplicação estará disponível em `http://localhost:4200`.
 
-## Further help
+#### Scripts Disponíveis
+* `npm run json-server`: Inicia o servidor JSON na porta 3000.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+* ``npm start``: Inicia a aplicação Angular.
+
+* `npm run build`: Compila a aplicação para produção.
+
+* `npm run watch`: Compila a aplicação em modo de desenvolvimento e observa por mudanças.
+
+* `npm test`: Executa os testes unitários.
